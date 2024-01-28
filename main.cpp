@@ -37,6 +37,9 @@ bool Preprocess(const path& in_file, const path& out_file, const vector<path>& i
     }
 
     ofstream out(out_file, ios::app);
+    if(!out.is_open()){
+        return false;
+    }
 
     string line;
     int line_num = 0;
